@@ -361,6 +361,7 @@ public class DeductionWork {
             if (s.charAt(i) == ',' && brackets == 0) {
                 G.add(new Parser(s.substring(afterLastComma, i)).parse());
                 freeVariables.add((G.get(G.size() - 1)).freeVariables(new ArrayList<Variable>()));
+                afterLastComma = i + 1;
             }
         }
         alpha = new Parser(s.substring(afterLastComma, s.indexOf("|-"))).parse();
