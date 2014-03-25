@@ -1,0 +1,2 @@
+P(x)|-@bP(f(b,b))->?bP(f(a,b))
+@bP(f(b,b))->?bP(f(a,b))
