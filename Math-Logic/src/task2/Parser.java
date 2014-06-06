@@ -29,7 +29,7 @@ public class Parser {
 
         // \/
         brackets = 0;
-        for (int i = l; i <= r; ++i)
+        for (int i = r; i >= l; --i)
         {
             if (expr.charAt(i) == '|' && brackets == 0)
                 return new Disjunction(realParse(l, i - 1), realParse(i + 1, r));
@@ -41,7 +41,7 @@ public class Parser {
 
         // &
         brackets = 0;
-        for (int i = l; i <= r; ++i)
+        for (int i = r; i >= l; --i)
         {
             if (expr.charAt(i) == '&' && brackets == 0)
                 return new Conjunction(realParse(l, i - 1), realParse(i + 1, r));
